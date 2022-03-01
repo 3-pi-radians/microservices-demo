@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect  } from "react";
+import { useState } from "react";
 
 const PostCreate = () => {
     const [title, setTitle] = useState('');
@@ -7,7 +7,7 @@ const PostCreate = () => {
     const submitPost = async (e) => {
         e.preventDefault();
 
-        const resp = await axios.post('http://localhost:4000/posts', {
+        const resp = await axios.post('http://posts.com/posts/create', {
             title
         });
 
